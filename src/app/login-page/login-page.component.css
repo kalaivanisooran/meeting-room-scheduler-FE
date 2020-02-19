@@ -1,0 +1,10 @@
+.login-card{
+    margin: 15% auto;
+    width: 60%;
+    padding: 10px; 
+    border-radius: 21px;
+}
+
+.login-header{
+    text-align: center;
+}
