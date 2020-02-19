@@ -9,9 +9,9 @@ import {Observable, Observer} from 'rxjs';
 export class LoginServiceService {
   private baseUrl = 'http://localhost:8081';
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  loginValidator(login : object) : Observable<object> {
+  loginValidator(login: object): Observable<object> {
     return this.http.get(`this.baseUrl`);
   }
 }

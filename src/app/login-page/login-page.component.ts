@@ -11,17 +11,18 @@ export class LoginPageComponent implements OnInit {
 
   modelLogin = new Login(null, null);
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   loginForm = new FormGroup({
     Username : new FormControl(),
     Password : new FormControl ()
   });
 
-  onSubmit(heroForm) : void {
-    console.log("onsubmit");
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(heroForm): void {
+    console.log('onsubmit');
     console.log(this.UserName.value);
     console.log(this.Password.value);
   }
