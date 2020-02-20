@@ -22,4 +22,10 @@ describe('LoginPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should login fileds empty', () => {
+    expect(component.UserName.value).toBe('');
+    expect(component.Password.value).toBe('');
+  });
+
 });
