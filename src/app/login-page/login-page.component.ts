@@ -1,6 +1,6 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
 import { Login } from '../service/login';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
@@ -12,8 +12,8 @@ export class LoginPageComponent implements OnInit {
   modelLogin = new Login(null, null);
 
   loginForm = new FormGroup({
-    Username : new FormControl(),
-    Password : new FormControl ()
+    Username: new FormControl('', [Validators.required, this.noWhitespaceValidator]),
+    Password: new FormControl ('', Validators.required)
   });
 
   constructor() { }
@@ -34,4 +34,10 @@ export class LoginPageComponent implements OnInit {
   get Password() {
     return this.loginForm.get('Password');
   }
+
+  public noWhitespaceValidator(control: FormControl) {
+    const isWhitespace = (control.value || '').trim().length === 0;
+    const isValid = !isWhitespace;
+    return isValid ? null : { 'whitespace': true };
+}
 }
