@@ -9,9 +9,11 @@
                             <div class="form-group">
                                 <label>Room</label>
                                 <select class="form-control drop" id="sel1">
-                                    <option>All</option>
-                                    <option>Glass Door 1</option>
-                                    <option>Glass Door 1</option>
+                                        <option value="0">--All--</option>
+                                        <option *ngFor="let room of roomList" value={{room.roomId}}>
+                                          {{room.roomName}}
+                                        </option>
+                                     
                                     
                                   </select>
                             </div>
@@ -46,10 +48,10 @@
                         <div class="col-md-4">
                         </div>
                         <div class="col-md-2">
-                            <button type="submit" class="btn btn-lg btn-primary">Search</button>
+                            <button type="submit" class="btn btn-lg btn-primary" (click)="fetchBookedData()">Search</button>
                         </div>
                         <div class="col-md-2">
-                            <button type="submit" class="btn btn-lg btn-primary">Book</button>
+                            <button type="submit" class="btn btn-lg btn-primary" (click)="bookRoom()">Book</button>
                         </div>
                         <div class="col-md-4">
                         </div>

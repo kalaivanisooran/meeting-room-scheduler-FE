@@ -9,7 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BookingComponent } from './booking/booking.component';
 import { SearchFormComponent } from './booking/search-form/search-form.component';
 import { ResultComponent } from './booking/result/result.component';
-
+import { SearchFormServiceService } from './service/search-form-service.service';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ResultComponent } from './booking/result/result.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
