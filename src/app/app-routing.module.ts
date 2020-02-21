@@ -5,9 +5,9 @@ import { BookingComponent } from './booking/booking.component';
 
 
 const routes: Routes = [
-  { path: '', component: LoginPageComponent } ,
+  { path: 'booking', component: BookingComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'booking', component: BookingComponent }
+  { path: '**', component: LoginPageComponent }
 
 ];
 

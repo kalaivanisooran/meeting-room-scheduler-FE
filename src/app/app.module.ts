@@ -10,6 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BookingComponent } from './booking/booking.component';
 import { SearchFormComponent } from './booking/search-form/search-form.component';
 import { ResultComponent } from './booking/result/result.component';
+import { TopNavigationComponent } from './top-navigation/top-navigation.component';
+import { LeftNavigationComponent } from './left-navigation/left-navigation.component';
+import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { ResultComponent } from './booking/result/result.component';
     NavbarComponent,
     BookingComponent,
     SearchFormComponent,
-    ResultComponent
+    ResultComponent,
+    TopNavigationComponent,
+    LeftNavigationComponent,
+    FooterNavigationComponent
   ],
   imports: [
     BrowserModule,
