@@ -6,12 +6,20 @@ import { FormsModule , ReactiveFormsModule , Validators} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BookingComponent } from './booking/booking.component';
+import { SearchFormComponent } from './booking/search-form/search-form.component';
+import { ResultComponent } from './booking/result/result.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    NavbarComponent,
+    BookingComponent,
+    SearchFormComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
