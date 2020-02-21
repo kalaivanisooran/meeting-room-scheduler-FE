@@ -12,7 +12,6 @@ import { SearchFormComponent } from './booking/search-form/search-form.component
 import { ResultComponent } from './booking/result/result.component';
 import { TopNavigationComponent } from './top-navigation/top-navigation.component';
 import { LeftNavigationComponent } from './left-navigation/left-navigation.component';
-import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 
 
 @NgModule({
@@ -24,8 +23,7 @@ import { FooterNavigationComponent } from './footer-navigation/footer-navigation
     SearchFormComponent,
     ResultComponent,
     TopNavigationComponent,
-    LeftNavigationComponent,
-    FooterNavigationComponent
+    LeftNavigationComponent
   ],
   imports: [
     BrowserModule,
