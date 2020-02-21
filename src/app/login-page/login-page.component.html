@@ -1,46 +1,52 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-6 login-card">
-            <!-- jquery validation -->
-            <div class="card card-primary">
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form role="form" id="quickForm" (ngSubmit)="onSubmit(heroForm)" #heroForm [formGroup]="loginForm">
-                <div class="card-body">
-                  <div class="form-group">
-                    <h1 class="login-header">Login</h1>
-                  </div>
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" formControlName="Username" [class.is-invalid]="loginForm.get('Username').invalid && loginForm.get('Username').touched" placeholder="Enter Username" required >
-                    <small [class.d-none]="loginForm.get('Username') .valid || loginForm.get('Username').untouched" class="text-danger">Username is required</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" class="form-control" formControlName="Password" [class.is-invalid]="loginForm.get('Password').invalid && loginForm.get('Password').touched" id="password" placeholder="Password" required>
-                    <small [class.d-none]="loginForm.get('Password') .valid || loginForm.get('Password').untouched" class="text-danger">Password is required</small>
-                  </div>
+  <!-- Content Header (Page header) -->
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6 login-card">
+          <!-- jquery validation -->
+          <div class="card card-primary">
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form role="form" id="quickForm" (ngSubmit)="onSubmit(heroForm)" #heroForm [formGroup]="loginForm">
+              <div class="card-body">
+                <div class="form-group">
+                  <h1 class="login-header">Login</h1>
                 </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" id="username" formControlName="Username"
+                    [class.is-invalid]="loginForm.get('Username').invalid && loginForm.get('Username').touched"
+                    placeholder="Enter Username" required>
+                  <small [class.d-none]="loginForm.get('Username') .valid || loginForm.get('Username').untouched"
+                    class="text-danger">Username is required</small>
                 </div>
-              </form>
-            </div>
-            <!-- /.card -->
-            </div>
-          <!--/.col (left) -->
-         
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" formControlName="Password"
+                    [class.is-invalid]="loginForm.get('Password').invalid && loginForm.get('Password').touched"
+                    id="password" placeholder="Password" required>
+                  <small [class.d-none]="loginForm.get('Password') .valid || loginForm.get('Password').untouched"
+                    class="text-danger">Password is required</small>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+        <!--/.col (left) -->
+
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

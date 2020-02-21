@@ -13,7 +13,7 @@ export class LoginPageComponent implements OnInit {
 
   loginForm = new FormGroup({
     Username: new FormControl('', [Validators.required, this.noWhitespaceValidator]),
-    Password: new FormControl ('', Validators.required)
+    Password: new FormControl('', [Validators.required, this.noWhitespaceValidator])
   });
 
   constructor() { }
@@ -22,9 +22,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmit(heroForm): void {
-    console.log('onsubmit');
-    console.log(this.UserName.value);
-    console.log(this.Password.value);
+    this.loginForm.markAllAsTouched();
   }
 
   get UserName() {
@@ -38,6 +36,6 @@ export class LoginPageComponent implements OnInit {
   public noWhitespaceValidator(control: FormControl) {
     const isWhitespace = (control.value || '').trim().length === 0;
     const isValid = !isWhitespace;
-    return isValid ? null : { 'whitespace': true };
-}
+    return isValid ? null : { whitespace: true };
+  }
 }
