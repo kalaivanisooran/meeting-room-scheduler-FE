@@ -12,6 +12,6 @@ export class LoginServiceService {
   constructor(private http: HttpClient) { }
 
   loginValidator(login: object): Observable<object> {
-    return this.http.get(`this.baseUrl`);
+    return this.http.get(`$this.baseUrl`);
   }
 }
